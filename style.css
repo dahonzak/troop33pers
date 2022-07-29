@@ -1,0 +1,139 @@
+html, body {
+  margin:0;
+}
+body {
+  background:rgb(225, 229, 234);
+}
+.card {
+  background-color:white;
+  color:#5a5858;
+  margin:20px;
+  padding:10px 0px;
+  
+}
+
+#menu {
+  border:none;
+  /*background:transparent;  */
+  outline:none;
+  padding:none;
+
+  height:19px;
+
+}
+#menu img {
+  height:19px;
+  vertical-align:middle;
+  margin:0px 15px;
+}
+#menu a {
+  padding:10px;
+   transition:0.2s linear;
+  background-color:white;
+  margin:0;
+  border:none;
+}
+#menu a:hover {
+  background-color:#cbc8c8;
+  cursor:pointer;
+}
+#carol {
+  border:none;
+  /*background:transparent;  */
+  outline:none;
+  padding:none;
+  width:800px;
+  float:left;
+}
+.mySlides {display: none}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 20px 20px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  height:50px;
+  width:50px;
+  line-height: 50px;
+  text-align:center;
+  margin-top: -22px;
+  color: white;
+  font-size: 15px;
+  background-color: rgba(0,0,0,0.6);
+  transition: 0.6s ease;
+  border-radius: 100%;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  opacity:0.5;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+/* Fading animation */
+.fade {
+  animation:fade 2s linear;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#event {
+  display:inline-block;
+  width:300px;
+  height:600px;
+  float:right;
+  overflow-y:auto;
+}
+#event h1 {
+  color:#ac0c0c;
+  text-align:center;
+  font-family: 'Roboto';
+}
+#event div {
+  border-top: 1px solid #bdbdbd;
+  padding:0px 20px 10px 20px;
+  font-family: 'Roboto';
+  transition:0.2s linear;
+}
+#event h3 {
+  font-size:12px;
+  letter-spacing: 0.7px;
+}
+#event div:hover {
+  background-color:#bdbdbd;
+  cursor:pointer;
+}
