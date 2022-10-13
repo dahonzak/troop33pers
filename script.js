@@ -46,7 +46,7 @@ function event() {
     var newweeklylist = newlist[1].split("/");
     document.getElementById('event').innerHTML += "<div><h3>• "+newlist[0]+" <br><i style='color:rgba(200,200,200,0.9);margin-left:10px;font-size:12px;'>"+months[parseInt(newweeklylist[0])-1]+" "+newweeklylist[1]+", "+newweeklylist[2]+"</i></h3></div>";
   }
-  document.getElementById('event').innerHTML += "";
+  document.getElementById('event').innerHTML += "<a id='donateButton'>Donate</a>";
 }
 event();
 
