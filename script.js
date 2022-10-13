@@ -1,5 +1,25 @@
-var events = ['Holiday Test-10/23/2022','Holiday2 Test-09/30/2022','Holiday Test3-11/23/2022'];
+var events = ['Test-10/23/2022'];
+var weekly = ['Troop Meeting-Thursday-7:00pm-8:30pm'];
+
+
+
+
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function nextDate(dayIndex) {
+    var today = new Date();
+    today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
+    return today;
+}
+function weekly1() {
+  for (var i = 0;i < weekly.length;i++) {
+    var newlist = weekly[i].split("-");
+    var next1 = nextDate(weekday.indexOf(newlist[1])).toLocaleString().substring(0, 10);
+    events.push(newlist[0]+"-"+next1);
+  }
+}
 function event() {
+  weekly1();
   document.getElementById('event').innerHTML += "<h1>Events</h1>";
   var events2 = events.slice();
   for (var o = 0;o < events2.length-1;o++) {
@@ -23,11 +43,13 @@ function event() {
   }
   for (var i = 0; i < events2.length;i++) {
     var newlist = events2[i].split("-");
-    document.getElementById('event').innerHTML += "<div><h3>"+newlist[0]+" - <i style='color:red;'>"+newlist[1]+"</i></h3></div>";
+    var newweeklylist = newlist[1].split("/");
+    document.getElementById('event').innerHTML += "<div><h3>• "+newlist[0]+" <br><i style='color:rgba(200,200,200,0.9);margin-left:10px;font-size:12px;'>"+months[parseInt(newweeklylist[0])-1]+" "+newweeklylist[1]+", "+newweeklylist[2]+"</i></h3></div>";
   }
   document.getElementById('event').innerHTML += "";
 }
 event();
+
 let slideIndex = 1;
 showSlides(slideIndex);
 

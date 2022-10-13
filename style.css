@@ -3,7 +3,9 @@ html, body {
 }
 body {
   background:rgb(225, 229, 234);
+  font-family: 'Titillium Web', sans-serif;
 }
+
 .card {
   background-color:white;
   color:#5a5858;
@@ -16,9 +18,9 @@ body {
   border:none;
   /*background:transparent;  */
   outline:none;
-  padding:none;
+  padding:0px;
 
-  height:19px;
+  height:45px;
 
 }
 #menu img {
@@ -27,11 +29,12 @@ body {
   margin:0px 15px;
 }
 #menu a {
-  padding:10px;
-   transition:0.2s linear;
+  padding:10px 20px;
+  transition:0.2s linear;
   background-color:white;
-  margin:0;
-  border:none;
+  margin:0px;
+  border:0px;
+  display:inline-block;
 }
 #menu a:hover {
   background-color:#cbc8c8;
@@ -41,9 +44,9 @@ body {
   border:none;
   /*background:transparent;  */
   outline:none;
-  padding:none;
   width:800px;
   float:left;
+  padding:0px;
 }
 .mySlides {display: none}
 
@@ -60,6 +63,7 @@ body {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  margin:20px;
   height:50px;
   width:50px;
   line-height: 50px;
@@ -75,7 +79,7 @@ body {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 0px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -121,19 +125,16 @@ body {
 #event h1 {
   color:#ac0c0c;
   text-align:center;
-  font-family: 'Roboto';
+  font-family: 'Titillium Web', sans-serif;
 }
 #event div {
-  border-top: 1px solid #bdbdbd;
-  padding:0px 20px 10px 20px;
-  font-family: 'Roboto';
+  
+  padding:10px 20px 10px 20px;
+  font-family: 'Titillium Web', sans-serif;
   transition:0.2s linear;
 }
 #event h3 {
-  font-size:12px;
+  font-size:15px;
   letter-spacing: 0.7px;
-}
-#event div:hover {
-  background-color:#bdbdbd;
-  cursor:pointer;
+  margin-left:10px;
 }
