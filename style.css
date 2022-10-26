@@ -15,6 +15,13 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+footer {
+  background-color:#ac0c0c;
+  margin-top: 300px;
+/*   width:100%; */
+  color:white;
+  padding:30px;
+}
 .card {
   background-color:white;
   color:#5a5858;

@@ -1,4 +1,7 @@
-var events = ['Test-10/23/2022'];
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  location.href='nophone.html';
+}
+var events = [];
 var weekly = ['Troop Meeting-Thursday-7:00pm-8:30pm'];
 
 
