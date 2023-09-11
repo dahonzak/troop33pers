@@ -26,7 +26,7 @@ footer {
   background-color:white;
   color:#5a5858;
   margin:20px;
-  padding:10px 0px;
+  /* padding:10px 0px; */
   
 }
 
@@ -48,6 +48,7 @@ footer {
   padding:10px 20.5px;
   transition:0.2s linear;
   background-color:white;
+  color:black;
   margin:0px;
   border:0px;
   display:inline-block;
@@ -58,28 +59,68 @@ footer {
   cursor:pointer;
 }
 #carol {
+  display: flex;
   border:none;
-  /*background:transparent;  */
+  /* display:block; */
   outline:none;
-  width:700px;
-  float:left;
+  width:calc(100% - 40px);
+  height:calc(100vh - 100px);
   padding:0px;
   margin-right:0px;
+  /* overflow:hidden; */
 }
+#pinned {
+  position:relative;
+  display:inline-block;
+  /* width:280px;  */
+  flex: 0 0 280px;
+  padding:10px;
+   height:calc(100% - 20px);
+  background:#cbc8c8;
+  text-align:center;
+}
+ #pinned h1 {
+  color:#ac0c0c;
+  text-align:center;
+  font-family: 'Titillium Web', sans-serif;
+  line-height:20px;
+  overflow-y:wrap;
+  overflow-wrap: break-word;
+}
+#pinned p {
+  position:absolute;
+  top:100px;
+  text-align:center;
+  width:calc(100% - 40px);
+  padding:20px;
+  margin:0;
+  overflow-y:wrap;
+  overflow-wrap: break-word;
+} 
 .text {
 /*   padding:0;
   background:rgba(0,0,0,0.4);
   backdrop-filter:blur(10px); */
   text-shadow:1px 1px 1px #000000;
 }
-.mySlides {display: none}
+.mySlides {
+  display: none;
+  height:100%;
+}
+.ff {
+  position:relative;
+  height:100%;
+  width:100%;
+}
 
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  /* width:calc(100% - 320px); */
+  height:calc(100% - 40px);
   position: relative;
   margin: 20px 20px;
+  flex: 1;
 }
 
 /* Next & previous buttons */
@@ -136,12 +177,14 @@ footer {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 700px) {
   .prev, .next,.text {font-size: 11px}
+  #pinned {display:none;}
 }
 #event {
   position:relative;
-  display:inline-block;
+  /* display:inline-block; */
+  display:none;
   width:300px;
   height:550px;
   float:right;
@@ -163,33 +206,7 @@ footer {
   letter-spacing: 0.7px;
   margin-left:10px;
 }
-#pinned {
-  position:relative;
-  display:inline-block;
-  width:280px;
-  height:520px;
-  margin-left:0px; 
-  float:center;
-  overflow-y:wrap;
-  background:rgba(255,255,255,0.6);
-  text-align:center;
-  overflow-wrap: break-word;
-}
-#pinned h1 {
-  color:#ac0c0c;
-  text-align:center;
-  font-family: 'Titillium Web', sans-serif;
-  line-height:20px;
-}
-#pinned p {
-  position:absolute;
-  top:100px;
-  text-align:center;
-  width:220px;
-  padding:20px;
-  margin:auto;
-  
-}
+
 #donateButton {
   position:absolute;
   bottom:0px;
